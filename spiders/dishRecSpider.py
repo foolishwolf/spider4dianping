@@ -17,7 +17,7 @@ sys.setdefaultencoding('gbk')
 
 class DishRecSpider(CrawlSpider):
 	MAX_PAGE_IDX = 10
-	IMG_ROOT_DIR = 'E:\\ICME_dishRec\\image'
+	IMG_ROOT_DIR = 'E:\\dishRec\\image'
 	SMALL_IMG_SIZE_STR = '240c180'
 	LARGE_IMG_SIZE_STR = '700x700'
 	DISH_LOG_DIR = '../dish.txt'
@@ -84,7 +84,7 @@ class DishRecSpider(CrawlSpider):
 				
 			item['name'] = dishInfo[dishTitlePre.end() : len(dishInfo)-1]
 			
-			item['link'] = response.url + '/photos/tag-²Ë-' + item['name']
+			item['link'] = response.url + '/photos/tag-Â²Ã‹-' + item['name']
 			dishItems.append(item)
 			
 			#fid.write(item['name'] + '\n')
